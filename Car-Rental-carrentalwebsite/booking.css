@@ -1,0 +1,310 @@
+.title1 {
+  text-align: center;
+  margin-top: 80px;
+  line-height: 1.4;
+  font-size: 1.8rem;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Car Section Layout */
+.carmain {
+  display: flex;
+  justify-content: space-between; /* evenly spread cards */
+  align-items: flex-start;
+  flex-wrap: nowrap; /* ❌ prevent wrapping to next line */
+  gap: 2rem;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 1200px;
+  overflow-x: auto; /* optional: allow scroll if screen is small */
+}
+
+/* Each Car Card */
+.carmain > div {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 350px;
+  flex-shrink: 0; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.carmain > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.carmain img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Car name */
+.carmain p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Divider */
+.carmain hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0 20px 10px;
+}
+
+/* Type section (passengers, gear, luggage) */
+.type {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.type i {
+  margin-right: 6px;
+  color: #f4af1a;
+}
+
+/* Book Button */
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e9c10d;
+}
+
+.book {
+  display: flex;
+  justify-content: space-around;
+}
+.part1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.deshi {
+    color: white;
+    align-items: center;
+    padding: 10px 0 0 30px;
+    font-family: "Bebas Neue", serif;
+}
+
+.deshi2 {
+    padding-left: 40px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 15px 50px;
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo section */
+.first {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.first h1 {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.first2 {
+  color: rgb(201, 166, 10);
+}
+
+/* Navbar Links */
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar ul li a:hover {
+  color: rgb(201, 166, 10);
+  transform: scale(1.05);
+}
+
+/* Buttons (Sign In / Log In) */
+.sing, .login {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sing {
+  background-color: rgb(201, 166, 10);
+  color: black;
+}
+
+.login {
+  background-color: rgba(201, 96, 10, 0.9);
+  color: white;
+}
+
+.sing:hover {
+  background-color: rgb(247, 233, 175);
+
+}
+
+.login:hover {
+  background-color: rgb(230, 110, 20);
+  transform: translateY(-2px);
+}
+/* footer  */
+.foot {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px;
+  padding: 60px 10%;
+  /* background: #111; */
+  color: #ddd;
+  margin-top: 120px;
+  background-color: rgb(25, 35, 65);
+}
+
+
+/* Footer Column */
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.footer-col p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+/* Logo Section */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.logo span {
+  color: #ffb400;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+  color: white;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Contact Info */
+.contact p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.contact i {
+  color: #ffb400;
+  margin-right: 10px;
+}
+
+.footer-col.contact a {
+  color: goldenrod;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-col.contact a:hover {
+  color: gold;
+  text-decoration: underline;
+}
+
+
+.copy{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.copy2{
+  display: flex;
+  gap: 40px;
+  color: white;
+}
+.copy2 a {
+  text-decoration: none;
+  color: rgb(231, 231, 231); 
+}
+.copy2 a:hover{
+  text-decoration: none;
+  color: rgb(243, 117, 0); 
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In Page</title>
+  <link rel="stylesheet" href="signin.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="sweetalert2.min.css">
+
+</head>
+<body>
+  <div class="main">
+    
+    <div class="welcome" data-aos="fade-right" data-aos-duration="1000">
+      <h1>Welcome<br>Back</h1>
+      <p>We’re happy to see you again!</p>
+    </div>
+
+    <div class="sign" data-aos="fade-left" data-aos-duration="1000">
+      <h1>Sign In</h1>
+      <p>Welcome back! Please enter your details.</p>
+
+      <form id="signupForm">
+    <label>Email</label><br>
+    <input type="email" id="email" class="label" placeholder="Enter your email" required><br><br>
+
+    <label>Password</label><br>
+    <input type="password" id="password" class="label" placeholder="Enter your password" required><br><br>
+
+    <!-- Use button instead of <a> -->
+    <button type="submit" class="btn">Sign Up</button>
+
+  </form>
+
+    </div>
+  </div>
+
+  
+  <script src="sign.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+  AOS.init();
+</script>
+</body>
+</html>

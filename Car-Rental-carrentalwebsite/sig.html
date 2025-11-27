@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+</head>
+<body>
+  <h2>Sign Up</h2>
+  <form id="signupForm">
+    <input type="text" id="username" placeholder="Enter Username" required><br><br>
+    <input type="password" id="password" placeholder="Enter Password" required><br><br>
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      // Object bana kar localStorage me save kar rahe hain
+      let user = {
+        username: username,
+        password: password
+      };
+
+      localStorage.setItem("userData", JSON.stringify(user));
+      alert("Sign Up Successful!");
+    });
+  </script>
+</body>
+</html>

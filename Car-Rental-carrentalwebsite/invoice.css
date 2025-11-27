@@ -1,0 +1,168 @@
+/* 🌐 Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f8f9fa);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #222;
+}
+
+/* 🔹 Main Layout */
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 30px;
+}
+
+/* 🏷️ Title */
+h1 {
+  text-align: center;
+  color: #1a1a1a;
+  margin: 50px 0 10px;
+  font-size: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 🖼️ Image Container */
+div img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-bottom: 4px solid #007bff;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+div img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* 🧾 Form Section */
+/* form {
+  width: 100%;
+  max-width: 480px;
+  background: #a51c1c;
+  padding: 35px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: transform 0.3s ease;
+} */
+
+form:hover {
+  transform: translateY(-4px);
+}
+
+/* 🏷️ Label + Input Row */
+p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 🧩 Inputs */
+input, select, textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 60%;
+  transition: 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* 📦 Data Box */
+.data {
+  border: 2px solid #dee2e6;
+  width: 300px;
+  border-radius: 10px;
+  background: #f3f4f5;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 🔘 Button Styles */
+.button {
+  color: #fff;
+  background-color: #007bff;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  width: 40%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  transform: scale(1.06);
+  box-shadow: 0 4px 10px rgba(0, 91, 187, 0.3);
+}
+
+/* 🪄 Button Container */
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+  }
+}

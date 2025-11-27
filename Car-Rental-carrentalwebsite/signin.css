@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background: linear-gradient(120deg, #1b1b1b, #2a2a2a); */
+  
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  background-color: #000;
+}
+
+/* Left side */
+.welcome {
+  width: 50%;
+  /* background: 
+    linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 87, 34, 0.6)),
+    url(singinpage.jpeg); */
+    background-image: url(singinpage.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 166px;
+  color: #fff;
+}
+
+
+/* Right side */
+.sign {
+  width: 50%;
+  background-color: #fff;
+  color: #333;
+  padding: 60px;
+}
+
+.sign h1 {
+  margin-bottom: 10px;
+}
+
+.sign p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Input fields */
+.label {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.label:focus {
+  border-color: #ff9800;
+}
+
+/* Button */
+.btn {
+  border: none;
+  display: inline-block;
+  /* background: #000; */
+  background-color: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  width: 380px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #333;
+}
+
+
+.btn:hover {
+  background-color: #ff5622e0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    width: 90%;
+  }
+  .welcome, .sign {
+    width: 100%;
+  }
+}

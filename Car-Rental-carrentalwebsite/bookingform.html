@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental Booking</title>
+  <link rel="stylesheet" href="bookingform.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+<body>
+
+  <div class="mainbody">
+
+    <!-- Car Details Card -->
+<div class="carcard">
+  <div class="imag">
+    <img src="" alt="Selected Car" id="img">
+  </div>
+
+  <div class="cardetails">
+    <div class="inforow">
+      <p style="color: black;">Name</p>
+      
+       <p id="carname"></p>
+    </div>
+
+    <div class="pricesection">
+      <div class="inforow">
+      <p>Price</p>
+<!-- <input type="text" id="price" placeholder="Price" style="border: none; color: rgb(15, 129, 235);font-weight: bold;font-size: 15px;"> -->
+ <p id="price"></p>
+      
+      </div>
+     <p class="note">* Prices exclude taxes and insurance.</p> <br>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- === Right: Booking Form === -->
+    <div class="bookingcontainer">
+      <h2>Car Rental — Booking Details</h2>
+      <p class="subtext">Fill the form below to book your car. Choose a car to auto-fill the details and image.</p>
+
+
+
+      <form class="bookingform"  onsubmit="data(event)">
+        <div class="inform">
+          <div class="field">
+            <p>Full Name</p>
+            <input type="text" placeholder="Enter your Full name" class="fill"  id="fullname" required>
+          </div>
+          <div class="field">
+            <p>Email</p>
+            <input type="email" placeholder="Enter your Email" class="fill" id="email" required>
+          </div>
+        </div>
+
+        <div class="inform">
+          <div class="field">
+            <p>Phone</p>
+            <input type="number" placeholder="Enter your Phone number" class="fill" id="phone" required>
+          </div>
+          <div class="field">
+            <p>Adhar No.</p>
+            <input type="number" placeholder="Enter your Adhar number" class="fill" id="adhar" required >
+          </div>
+        </div>
+
+        <div class="inform">
+          <div class="field">
+            <p>Pickup Date</p>
+            <input type="date" class="fill" id="pickupdate" required>
+          </div>
+          <div class="field">
+            <p>Pickup Time</p>
+            <input type="time" class="fill" id="pickuptime"required>
+          </div>
+        </div>
+
+        <div class="inform">
+          <div class="field">
+            <p>Return Date</p>
+            <input type="date" class="fill" id="returndate" required>
+          </div>
+          <div class="field">
+            <p>Return Time</p>
+            <input type="time" class="fill" id="returntime" required>
+          </div>
+        </div>
+
+        <div class="inform">
+          <div class="field">
+            <p>Pickup Location</p>
+            <input type="text" placeholder="Enter pickup Location" class="fill" id="pickuplocation" required>
+          </div>
+          <div class="field">
+            <p>Return Location</p>
+            <input type="text" placeholder="Enter Return Location" class="fill" id="returnlocation" required>
+          </div>
+        </div>
+
+        <!-- payment method  -->
+         <div class="paymentbox">
+  <label for="paymentmethod">Payment Method</label>
+  <select id="paymentmethod"  >
+    <option>Select Method</option>
+    <option >Credit </option>
+        <option >Debit Card</option>
+    <option >UPI</option>
+    <option >Net Banking</option>
+    <option >Cash on Delivery</option>
+  </select>
+</div>
+        
+<div>
+<a href="#" class="submitbtn" onclick="data(event)">Submit</a>
+
+</div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <script src="booking.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

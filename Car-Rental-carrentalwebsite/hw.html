@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Rental — Booking Details Form</title>
+  <style>
+    :root{
+      --bg:#f4f6fb; --card:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --accent-2:#0f1724;
+      --shadow: 0 6px 18px rgba(15,23,36,0.08);
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:linear-gradient(180deg,#eef2f7 0%, #f8fafc 100%);display:flex;align-items:center;justify-content:center;padding:32px}
+
+    .container{width:100%;max-width:1100px;background:var(--card);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:430px 1fr}
+
+    /* left: image + car details */
+    .left{background:linear-gradient(180deg, #ffffff, #fbfdff);padding:28px}
+    .car-card{border-radius:12px;border:1px solid rgba(15,23,36,0.04);padding:18px;background:linear-gradient(180deg,#fbffff, #ffffff);}
+    .car-image{width:100%;height:220px;border-radius:10px;object-fit:cover;display:block;margin-bottom:12px;background:#e6eef0}
+    .car-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+    .car-title h2{font-size:18px;margin:0;color:var(--accent-2)}
+    .tag{background:linear-gradient(90deg,#06b6d4,#0891b2);color:white;padding:6px 10px;border-radius:999px;font-size:13px}
+    .specs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
+    .spec{background:#f8fafc;border-radius:8px;padding:10px;font-size:13px;color:var(--muted);display:flex;flex-direction:column}
+    .spec strong{color:#0f1724;margin-bottom:6px}
+    .price{margin-top:12px;font-size:20px;color:var(--accent-2);font-weight:700}
+
+    /* right: booking form */
+    .right{padding:28px}
+    .heading{font-size:20px;margin:0 0 10px 0;color:var(--accent-2)}
+    .sub{color:var(--muted);font-size:14px;margin-bottom:18px}
+
+    form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea, input[type="date"], input[type="time"]{
+      width:100%;padding:10px 12px;border-radius:8px;border:1px solid #e6eef6;background:#fbfeff;font-size:14px;color:var(--accent-2);
+    }
+    textarea{min-height:96px;resize:vertical}
+
+    .full{grid-column:1 / -1}
+    .actions{grid-column:1 / -1;display:flex;gap:12px;align-items:center;margin-top:6px}
+    .btn{background:var(--accent);color:white;padding:12px 16px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn.secondary{background:transparent;color:var(--accent-2);border:1px solid rgba(15,23,36,0.06)}
+
+    .row{display:flex;gap:12px}
+    .note{font-size:13px;color:var(--muted);margin-top:10px}
+
+    /* responsive */
+    @media (max-width:920px){
+      .container{grid-template-columns:1fr}
+      .left{order:2}
+      .right{order:1}
+      .car-image{height:180px}
+      form{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="car-card">
+        <img id="carImg" class="car-image" src="https://www.topgearmag.in/uploads/Reviewsthumb/Image/reviews1705468063.jpg" alt="Car image">
+        <div class="car-title">
+          <h2 id="carName">Hyundai Creta</h2>
+          <div class="tag" id="carType">SUV</div>
+        </div>
+
+        <div class="specs">
+          <div class="spec"><strong>Model</strong><span id="carModel">2024</span></div>
+          <div class="spec"><strong>Seats</strong><span id="carSeats">5</span></div>
+          <div class="spec"><strong>Transmission</strong><span id="carTrans">Automatic</span></div>
+          <div class="spec"><strong>Fuel</strong><span id="carFuel">Petrol</span></div>
+        </div>
+
+        <div class="price">₹ <span id="carPrice">2,199</span> / day</div>
+        <div class="note">* Prices exclude taxes and insurance. Free cancellation 24 hours before pickup.</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <h3 class="heading">Car Rental — Booking Details</h3>
+      <div class="sub">Fill the form below to book your car. Choose a car to auto-fill the details and image.</div>
+
+      <form id="bookingForm">
+        <div class="full">
+          <label for="selectCar">Choose a car</label>
+          <select id="selectCar" onchange="updateCar()">
+            <option value="creta" data-img="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=60" data-type="SUV" data-model="2024" data-seats="5" data-trans="Automatic" data-fuel="Petrol" data-price="2199">Hyundai Creta — SUV</option>
+            <option value="city" data-img="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=60" data-type="Sedan" data-model="2023" data-seats="5" data-trans="Manual" data-fuel="Petrol" data-price="1499">Honda City — Sedan</option>
+            <option value="venue" data-img="https://images.unsplash.com/photo-1614463099386-3f2c71b1bd6a?auto=format&fit=crop&w=1200&q=60" data-type="Compact" data-model="2022" data-seats="5" data-trans="Automatic" data-fuel="Petrol" data-price="999">Hyundai Venue — Compact</option>
+            <option value="innova" data-img="https://images.unsplash.com/photo-1614237149482-5f8a7f2d7f15?auto=format&fit=crop&w=1200&q=60" data-type="MUV" data-model="2024" data-seats="7" data-trans="Automatic" data-fuel="Diesel" data-price="3499">Toyota Innova — MUV</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" placeholder="Your full name" required>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="+91 9XXXXXXXXX" required>
+        </div>
+
+        <div>
+          <label for="pickupDate">Pickup date</label>
+          <input type="date" id="pickupDate" required>
+        </div>
+
+        <div>
+          <label for="pickupTime">Pickup time</label>
+          <input type="time" id="pickupTime" required>
+        </div>
+
+        <div>
+          <label for="returnDate">Return date</label>
+          <input type="date" id="returnDate" required>
+        </div>
+
+        <div>
+          <label for="returnTime">Return time</label>
+          <input type="time" id="returnTime" required>
+        </div>
+
+        <div>
+          <label for="pickupLoc">Pickup location</label>
+          <input type="text" id="pickupLoc" placeholder="City / Airport / Station" required>
+        </div>
+
+        <div>
+          <label for="returnLoc">Return location</label>
+          <input type="text" id="returnLoc" placeholder="City / Airport / Station" required>
+        </div>
+
+        <div>
+          <label for="coupon">Promo code</label>
+          <input type="text" id="coupon" placeholder="Enter code (optional)">
+        </div>
+
+        <div class="full">
+          <label for="notes">Additional requests / notes</label>
+          <textarea id="notes" placeholder="Child seat, GPS, driver language preference... (optional)"></textarea>
+        </div>
+
+        <div class="full actions">
+          <button type="button" class="btn" onclick="previewBooking()">Preview Booking</button>
+          <button type="submit" class="btn secondary">Confirm & Pay</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    function updateCar(){
+      const sel = document.getElementById('selectCar');
+      const opt = sel.options[sel.selectedIndex];
+      const img = opt.getAttribute('data-img');
+      const type = opt.getAttribute('data-type');
+      const model = opt.getAttribute('data-model');
+      const seats = opt.getAttribute('data-seats');
+      const trans = opt.getAttribute('data-trans');
+      const fuel = opt.getAttribute('data-fuel');
+      const price = opt.getAttribute('data-price');
+
+      document.getElementById('carImg').src = img;
+      document.getElementById('carName').textContent = opt.text.split(' — ')[0];
+      document.getElementById('carType').textContent = type;
+      document.getElementById('carModel').textContent = model;
+      document.getElementById('carSeats').textContent = seats;
+      document.getElementById('carTrans').textContent = trans;
+      document.getElementById('carFuel').textContent = fuel;
+      document.getElementById('carPrice').textContent = price;
+    }
+
+    // Preview shows a simple alert summary (you can customize to a modal)
+    function previewBooking(){
+      const name = document.getElementById('fullName').value || '(not set)';
+      const car = document.getElementById('selectCar').options[document.getElementById('selectCar').selectedIndex].text;
+      const pickup = document.getElementById('pickupDate').value + ' ' + document.getElementById('pickupTime').value;
+      const ret = document.getElementById('returnDate').value + ' ' + document.getElementById('returnTime').value;
+      alert('Preview — ' + name + '\n' + car + '\nPickup: ' + pickup + '\nReturn: ' + ret);
+    }
+
+    // simple submit handler (prevent real submit for demo)
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Booking confirmed! (This is a demo — hook this to your backend.)');
+    });
+
+    // initialize
+    updateCar();
+  </script>
+</body>
+</html>

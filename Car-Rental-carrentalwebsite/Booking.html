@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    
+  <!-- Hero Section -->
+  <div class="backimg">
+    <div class="part1">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="first">
+          <h1>premium</h1>
+          <h1 class="first2">CAR</h1>
+        </div>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">GALLERY</a></li>
+          <li><a href="">SERVICE</a></li>
+          <li><a href="">CONTACT</a></li>
+          <li><a href="sign.html" class="sing">SIGN IN</a></li>
+          <li><a href="loginin.html" class="login">LOG IN</a></li>
+        </ul>
+      </nav>
+    <!-- list of cars -->
+
+   <div class="carmain">
+    <div class="car1">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC1ec0pdftVLB80JXzQYEDJK9mbPHGdWx9Hg&s" alt="" id="image">
+  <p id="name">TATA Nexon</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 3</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p id="price">₹2500/day</p>
+    </div>
+    <div>
+    
+      <a href="bookingform.html" class="btn" onclick="booking('TATA Nexon','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC1ec0pdftVLB80JXzQYEDJK9mbPHGdWx9Hg&s','2500Rs');">Book Now</a>
+
+
+    </div>
+      
+  </div>
+  
+</div>
+
+<div class="car2">
+  <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/107543/brezza-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80" alt="" id="image">
+  <p id="name">Maruti Brezza</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 5</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Starting from</span></p>
+      <p id="price">₹2000/day</p>
+    </div>
+    <div>
+      <a href="#" class="btn" onclick="booking('Maruti','https://imgd.aeplcdn.com/664x374/n/cw/ec/107543/brezza-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80','2000')">Book Now</a>
+
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="car3">
+        <img src="https://etimg.etb2bimg.com/photo/106892447.cms" alt="">
+  <p>Hyundai  Creta</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic/manual</p>
+    <p><i class="fa-solid fa-briefcase"></i> 1</p>
+  </div>
+<hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹3000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Hyundai  Creta','https://etimg.etb2bimg.com/photo/106892447.cms','₹3000')" >Book Now</a>
+    </div>
+      
+  </div>
+    </div>
+   </div>
+<!-- car 2 line  -->
+ <div class="carmain">
+    <div class="car1">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvKMeQAUM9EKCh9MPoy9r3-BUVWd-9bS5l-w&s" alt="">
+  <p>Mahindra Thar</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 4</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹2500/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Mahindra Thar','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvKMeQAUM9EKCh9MPoy9r3-BUVWd-9bS5l-w&s','₹2500' )">Book Now</a>
+    </div>
+      
+  </div>
+  
+</div>
+
+    <div class="car2">
+       <img src="https://i.cdn.newsbytesapp.com/images/l62520220630103503.jpeg" alt="">
+  <p>Scorpio-n</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 7</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 3</p>
+  </div><hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹3000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Scorpio-n','https://i.cdn.newsbytesapp.com/images/l62520220630103503.jpeg','₹3000')" >Book Now</a>
+    </div>
+      
+  </div>
+  
+
+    </div>
+    <div class="car3">
+        <img src="https://c.ndtvimg.com/2021-10/2jdjlfr_tata-punch_625x300_04_October_21.jpg" alt="">
+  <p>TATA Punch</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 2</p>
+  </div>
+<hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹2000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('TATA Punch','https://c.ndtvimg.com/2021-10/2jdjlfr_tata-punch_625x300_04_October_21.jpg','₹2000')">Book Now</a>
+    </div>
+      
+  </div>
+    </div>
+   </div>
+
+   <!-- line3 car -->
+    <div class="carmain">
+    <div class="car1">
+  <img src="https://cdn-s3.autocarindia.com/Maruti-Suzuki/Fronx/_AAB6274.JPG?w=728&q=75" alt="">
+  <p>Maruti Fronx</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 3</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹2000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+  <a href="bookingform.html" class="btn" onclick="booking('maruti fronx','https://cdn-s3.autocarindia.com/Maruti-Suzuki/Fronx/_AAB6274.JPG?w=728&q=75','₹2000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+</div>
+
+    <div class="car2">
+       <img src="https://5.imimg.com/data5/ANDROID/Default/2021/3/YL/EI/PG/39272565/img-20210319-wa0009-jpg-500x500.jpg" alt="">
+  <p>Mahindra Bolero </p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 7</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 5</p>
+  </div><hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹3000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Mahindra Bolero','https://5.imimg.com/data5/ANDROID/Default/2021/3/YL/EI/PG/39272565/img-20210319-wa0009-jpg-500x500.jpg','₹3000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+
+    </div>
+    <div class="car3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Q0Gt4BV7Af4zYGInyddBV7L6VB40Gsstlg&s" alt="">
+  <p>Mahindra XUV700</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 7</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 1</p>
+  </div>
+<hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹5000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Mahindra XUV700','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Q0Gt4BV7Af4zYGInyddBV7L6VB40Gsstlg&s','₹5000')">Book Now</a>
+    </div>
+      
+  </div>
+    </div>
+   </div>
+
+   <!-- line 4 car  -->
+    <div class="carmain">
+    <div class="car1">
+  <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/174423/sonet-exterior-left-front-three-quarter.jpeg?isig=0&q=80" alt="">
+  <p>KIA Sonet</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 3</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹2500/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('KIA Sonet','https://imgd.aeplcdn.com/664x374/n/cw/ec/174423/sonet-exterior-left-front-three-quarter.jpeg?isig=0&q=80','₹2500')">Book Now</a>
+    </div>
+      
+  </div>
+  
+</div>
+
+    <div class="car2">
+       <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/121943/verna-facelift-exterior-right-front-three-quarter-100.jpeg?isig=0&q=80" alt="">
+  <p>hyundai verna</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 5</p>
+  </div><hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹3000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('hyudai verna','https://imgd.aeplcdn.com/664x374/n/cw/ec/121943/verna-facelift-exterior-right-front-three-quarter-100.jpeg?isig=0&q=80','₹3000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+
+    </div>
+    <div class="car3">
+        <img src="https://www.usnews.com/object/image/00000191-ebcd-d396-a1ff-fbdf35860001/01-usnpx-2025hyundaivenue-angularfront-jms.jpg?update-time=1726238473076&size=responsiveGallery&format=webp" alt="">
+  <p>Hyudai Venue</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 1</p>
+  </div>
+<hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹3500/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Hyudai venue','https://www.usnews.com/object/image/00000191-ebcd-d396-a1ff-fbdf35860001/01-usnpx-2025hyundaivenue-angularfront-jms.jpg?update-time=1726238473076&size=responsiveGallery&format=webp','₹3500')">Book Now</a>
+    </div>
+      
+  </div>
+    </div>
+   </div>
+
+
+   
+   <!-- list of cars -->
+
+   <div class="carmain">
+    <div class="car1">
+  <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800" alt="">
+  <p>Mercedes-Benz S-Class</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 3</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹15000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Mercedes-Benz S-Class','https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800','₹15000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+</div>
+
+    <div class="car2">
+       <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800" alt="">
+  <p>BMW M4</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 7</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 5</p>
+  </div><hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹10000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+     <a href="bookingform.html" class="btn" onclick="booking('BMW M4','https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800','₹10000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+
+    </div>
+    <div class="car3">
+        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=800" alt="">
+  <p>Ferrai 458</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 2</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 1</p>
+  </div>
+<hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹25000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Ferrai 458','https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=800','₹25000')">Book Now</a>
+    </div>
+      
+  </div>
+    </div>
+   </div>
+<!-- car 2 line  -->
+ <div class="carmain">
+    <div class="car1">
+  <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800" alt="">
+  <p>Audi S6</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 4</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹10000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Audi S6','https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800','₹10000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+</div>
+
+    <div class="car2">
+       <img src="https://imgd.aeplcdn.com/1920x1080/n/cw/ec/124141/a8-l-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80&q=80" alt="">
+  <p>Audi</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 3</p>
+  </div><hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹10000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Audi','https://imgd.aeplcdn.com/1920x1080/n/cw/ec/124141/a8-l-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80&q=80','₹10000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+
+    </div>
+    <div class="car3">
+        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800" alt="">
+  <p>Tesla</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 2</p>
+  </div>
+<hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹20000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Tesla','https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800','₹20000')">Book Now</a>
+    </div>
+      
+  </div>
+    </div>
+   </div>
+
+   <!-- line3 car -->
+    <div class="carmain">
+    <div class="car1">
+  <img src="https://spn-sta.spinny.com/blog/20221202123514/Toyota-Fortuner.jpg" alt="">
+  <p>toyota fortuner</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 7</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 3</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹10000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('toyota fortuner','https://spn-sta.spinny.com/blog/20221202123514/Toyota-Fortuner.jpg','₹10000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+</div>
+
+    <div class="car2">
+       <img src="https://cdn.motor1.com/images/mgl/zxp3Jb/s1/bugatti-centodieci-2022-zehntes-und-letztes-exemplar.jpg" alt="">
+  <p>Centodieci Bugatti</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 2</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 5</p>
+  </div><hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>1000000₹/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Centodieci Bugatti','https://cdn.motor1.com/images/mgl/zxp3Jb/s1/bugatti-centodieci-2022-zehntes-und-letztes-exemplar.jpg','1000000₹')">Book Now</a>
+    </div>
+      
+  </div>
+  
+
+    </div>
+    <div class="car3">
+        <img src="https://images-porsche.imgix.net/-/media/5CCEFD7BFDEC44B0BFEDD8FC51856632_A716CD4802D241E3BE787EF14B813101_911-gt3-rs-side?w=2560&h=699&q=45&crop=faces%2Centropy%2Cedges&auto=format" alt="">
+  <p>porsche 911 gt3</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 2</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 1</p>
+  </div>
+<hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹500000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('porsche 911 gt3','https://images-porsche.imgix.net/-/media/5CCEFD7BFDEC44B0BFEDD8FC51856632_A716CD4802D241E3BE787EF14B813101_911-gt3-rs-side?w=2560&h=699&q=45&crop=faces%2Centropy%2Cedges&auto=format','₹500000')">Book Now</a>
+    </div>
+      
+  </div>
+    </div>
+   </div>
+
+   <!-- line 4 car  -->
+    <div class="carmain">
+    <div class="car1">
+  <img src="https://i.ytimg.com/vi/oUxkYlZaVbI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAjgFloUQMvQETXuUKpFAOzPvCQ7A" alt="">
+  <p>Rolls-Royce Phantom</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 5</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 3</p>
+  </div>
+  <hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹50000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Rolls-Royce Phantom','https://i.ytimg.com/vi/oUxkYlZaVbI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAjgFloUQMvQETXuUKpFAOzPvCQ7A','₹50000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+</div>
+
+    <div class="car2">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0WBgirMCKvEUAk0i_FWS5vMN10V2F0c96mbuIeBeqGc6J185p2S-ICkq0Gt1iE9qOcBY&usqp=CAU" alt="">
+  <p>Bentley Toronto</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 2</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 5</p>
+  </div><hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹20000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+    <a href="bookingform.html" class="btn" onclick="booking('Bentley Toronto','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0WBgirMCKvEUAk0i_FWS5vMN10V2F0c96mbuIeBeqGc6J185p2S-ICkq0Gt1iE9qOcBY&usqp=CAU','₹20000')">Book Now</a>
+    </div>
+      
+  </div>
+  
+
+    </div>
+    <div class="car3">
+        <img src="https://i.cdn.newsbytesapp.com/images/l60420230117140556.jpeg" alt="">
+  <p>BMW X7</p>
+  <hr>
+  <div class="type">
+    <p><i class="fa-solid fa-users"></i> 7</p>
+    <p><i class="fa-solid fa-gear"></i> Automatic</p>
+    <p><i class="fa-solid fa-briefcase"></i> 1</p>
+  </div>
+<hr>
+  <div class="book">
+    <div>
+      <p><span style="color: rgb(78, 78, 78);">Strating from</span></p>
+      <p>₹35000/<span style="color: rgb(78, 78, 78);">day</span></p>
+    </div>
+    <div>
+  <a href="bookingform.html" class="btn" onclick="booking('BMW X7','https://i.cdn.newsbytesapp.com/images/l60420230117140556.jpeg','₹35000')">Book Now</a>
+    </div>
+      
+  </div>
+    </div>
+   </div>
+
+
+   <!-- footer  -->
+  
+   <section class="footer">
+  <div class="foot">
+
+    <!-- About Section -->
+    <div class="footer-col about">
+      <h2 class="logo"><span>Drive</span>Luxury</h2>
+      <p>Experience the ultimate in premium car rentals. Your journey begins with us.</p>
+      <div class="icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Our Fleet</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Why Choose Us</a></li>
+        <li><a href="#">Locations</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="#">Luxury Sedans</a></li>
+        <li><a href="#">Premium SUVs</a></li>
+        <li><a href="#">Sports Cars</a></li>
+        <li><a href="#">Chauffeur Service</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="footer-col contact">
+      <h3>Contact Us</h3>
+
+      <!-- Click to call -->
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:9926381513">9926381513</a><br>
+        <span>Mon–Sun: 24/7</span>
+      </p>
+
+      <!-- Click to send email -->
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:sumitrajaksumitrajak793@gmail.com">
+          sumitrajaksumitrajak793@gmail.com
+        </a>
+      </p>
+
+      <!-- Clickable Google Maps location -->
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        <a href="https://www.google.com/maps?q=Bhopal+MP+India" target="_blank">
+          123 Luxury Drive<br>Bhopal MP India
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+</div>
+<!-- copy right  -->
+     
+<hr style="color: rgb(70, 69, 69);">
+<div class="copy" >
+      <div>
+       <p>© 2025 DriveLuxury. All rights reserved.</p>
+      </div>
+      <div class="copy2">
+      <a href="">Privacy Policy</a>
+      <a href="">Terms of Service</a>
+      <a href="">Cookie Policy</a>
+      </div>
+     </div>
+  </div>
+    
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
+<script src="deatils.js"></script>
+</body>
+</html>

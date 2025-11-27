@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Form</title>
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      max-width: 800px;
+      width: 90%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 20px;
+    }
+    .car-details {
+      flex: 1;
+      text-align: center;
+    }
+    .car-details img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .car-details h2 {
+      margin: 10px 0;
+    }
+    .car-info {
+      text-align: left;
+      margin-top: 10px;
+      font-size: 15px;
+      color: #444;
+    }
+    .price {
+      font-weight: bold;
+      color: #ff6600;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left side: Car details -->
+    <div class="car-details">
+      <img class="car-img" src="https://images.drivespark.com/img/2024/10/tata-punch-adventure-cover-jpg-1730269268830_1730269276776-1200x675.jpg" alt="Car Image">
+      <h2 class="car-name"></h2>
+      <div class="car-info">
+        <p><i class="fa-solid fa-users"></i> Seats: <span class="seats"></span></p>
+        <p><i class="fa-solid fa-gear"></i> Type: <span class="type"></span></p>
+        <p><i class="fa-solid fa-briefcase"></i> Bags: <span class="bags"></span></p>
+      </div>
+      <p class="price"></p>
+    </div>
+
+    <!-- Right side: Booking form -->
+    <div class="booking-form">
+      <h3>Book Your Ride</h3>
+      <form onsubmit="handleSubmit(event)">
+        <label>Full Name</label><br>
+        <input type="text" id="fullname" required><br>
+
+        <label>Email</label><br>
+        <input type="email" id="email" required><br>
+
+        <label>Pickup Location</label><br>
+        <input type="text" id="pickup" required><br>
+
+        <label>Return Location</label><br>
+        <input type="text" id="return" required><br>
+
+        <label>Pickup Date</label><br>
+        <input type="date" id="pickupdate" required><br>
+
+        <label>Return Date</label><br>
+        <input type="date" id="returndate" required><br>
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ✅ Extract car details from the URL
+    function getCarDetails() {
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name");
+      const image = params.get("image");
+      const price = params.get("price");
+      const type = params.get("type");
+      const seats = params.get("seats");
+      const bags = params.get("bags");
+
+      document.querySelector(".car-name").textContent = name;
+      document.querySelector(".car-img").src = image;
+      document.querySelector(".price").textContent = `₹${price}/day`;
+      document.querySelector(".type").textContent = type;
+      document.querySelector(".seats").textContent = seats;
+      document.querySelector(".bags").textContent = bags;
+    }
+
+    // ✅ Submit booking form
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("✅ Booking Confirmed!");
+    }
+
+    // Run function on page load
+    window.onload = getCarDetails;
+  </script>
+
+</body>
+</html>
